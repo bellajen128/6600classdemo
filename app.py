@@ -11,9 +11,9 @@ st.set_page_config(page_title="My Streamlit App", page_icon=":guardsman:", layou
 
 st.title('Dining Data Dashboard: Stars, Categories, and More')
 st.write('IE 6600 Project 2 *by Bella Jen*')
-         
-data = pd.read_csv("/Users/bella/Downloads/cleaned_full_data.csv", encoding="ISO-8859-1")
 
+
+data = pd.read_csv("https://raw.githubusercontent.com/bellajen128/6600classmo/main/cleaned_full_data.csv", encoding="ISO-8859-1")
 st.sidebar.header("Filter")
 option = data['city'].unique()
 option = np.insert(option, 0, 'All') 
