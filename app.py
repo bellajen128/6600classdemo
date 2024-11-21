@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import altair as alt
 
+alt.renderers.enable('default')
 
 st.set_page_config(page_title="My Streamlit App", page_icon=":guardsman:", layout="wide", initial_sidebar_state="expanded")
 
