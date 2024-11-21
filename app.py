@@ -192,7 +192,7 @@ plot3 = plot3.groupby('cuisine', as_index=False).agg(
 # Create bar chart with logarithmic scale
 bar_chart = alt.Chart(plot3).mark_bar().encode(
     x=alt.X('cuisine:N', title='Cuisine Type', sort='-y', axis=alt.Axis(labelAngle=0, labelFontSize=12)),  
-    y=alt.Y('total_reviews:Q', title='Total Reviews (Log Scale)', scale=alt.Scale(type='log')),                                    
+    y=alt.Y('total_reviews:Q', title='Total Reviews'),                                    
     color=alt.Color('cuisine:N', legend=None)                                          
 )
 
@@ -217,7 +217,7 @@ text_labels = bar_chart.mark_text(
 
 # Combine chart and text
 combined_chart = (bar_chart + text_labels).properties(
-    title="Total Reviews and Average Star Ratings by Cuisine Type (Logarithmic Scale)",
+    title="Total Reviews and Average Star Ratings by Cuisine Type",
     width=600,
     height=400
 ).configure_axis(
